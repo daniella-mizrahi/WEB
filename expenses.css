@@ -1,0 +1,184 @@
+/* ==========================================================================
+   about.css — מסך 5: אודות
+   Layout: hero + team grid + FAQ accordion + contact banner
+   ========================================================================== */
+
+/* ── About Hero ────────────────────────────────────────────────────── */
+.about-hero {
+  padding: var(--sp-3xl) var(--sp-xl);
+  text-align: center;
+  background: linear-gradient(180deg, var(--clr-surface), var(--clr-bg));
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.about-hero h1 {
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--sp-lg);
+}
+
+.about-hero__desc {
+  font-size: var(--fs-md);
+  color: var(--clr-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ── Team Section ──────────────────────────────────────────────────── */
+.team-section {
+  padding: var(--sp-3xl) var(--sp-xl);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-card {
+  text-align: center;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--clr-primary);
+}
+
+.team-card__avatar {
+  font-size: 3rem;
+  margin-bottom: var(--sp-md);
+}
+
+.team-card h3 {
+  font-size: var(--fs-md);
+  margin-bottom: var(--sp-xs);
+}
+
+.team-card p {
+  font-size: var(--fs-sm);
+}
+
+/* ── FAQ Section ───────────────────────────────────────────────────── */
+.faq-section {
+  padding: var(--sp-3xl) var(--sp-xl);
+  background: var(--clr-surface);
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+}
+
+.faq-item {
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-normal);
+}
+
+.faq-item:hover {
+  border-color: var(--clr-primary);
+}
+
+.faq-item__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-lg);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--clr-text-light);
+  background: transparent;
+  text-align: right;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.faq-item__question:hover {
+  background: var(--clr-surface-3);
+}
+
+.faq-item__icon {
+  font-size: var(--fs-xl);
+  color: var(--clr-primary-light);
+  font-weight: 300;
+  min-width: 24px;
+  text-align: center;
+}
+
+.faq-item__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 var(--sp-lg);
+}
+
+.faq-item__answer p {
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  color: var(--clr-text-muted);
+}
+
+/* JS REQ #3: Dynamic CSS class — open state */
+.faq-item--open {
+  border-color: var(--clr-primary);
+}
+
+.faq-item--open .faq-item__answer {
+  max-height: 300px;
+  padding: 0 var(--sp-lg) var(--sp-lg);
+}
+
+.faq-item--open .faq-item__question {
+  color: var(--clr-primary-light);
+}
+
+/* ── Contact Banner ────────────────────────────────────────────────── */
+.contact-banner {
+  padding: var(--sp-3xl) var(--sp-xl);
+  text-align: center;
+}
+
+.contact-banner h2 {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--sp-sm);
+}
+
+.contact-banner p {
+  font-size: var(--fs-md);
+  margin-bottom: var(--sp-xl);
+}
+
+.contact-banner__cta {
+  display: flex;
+  gap: var(--sp-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+
+  .about-hero h1 {
+    font-size: var(--fs-2xl);
+  }
+}

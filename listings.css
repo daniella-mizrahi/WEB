@@ -1,0 +1,170 @@
+/* ==========================================================================
+   listing-detail.css — מסך 4: פרטי דירה
+   ========================================================================== */
+
+.detail-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--sp-2xl) var(--sp-xl);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-xs);
+  color: var(--clr-primary-light);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  margin-bottom: var(--sp-lg);
+  transition: color var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--clr-text-light);
+}
+
+/* ── Detail Header ─────────────────────────────────────────────────── */
+.detail-header {
+  margin-bottom: var(--sp-2xl);
+  border-bottom: 2px solid var(--clr-border);
+  padding-bottom: var(--sp-lg);
+}
+
+.detail-header__city {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--clr-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--sp-xs);
+}
+
+.detail-header__address {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ── Two-Column Grid ───────────────────────────────────────────────── */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--sp-2xl);
+  align-items: start;
+}
+
+/* ── Left: Info Section ────────────────────────────────────────────── */
+.detail-info__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-xl);
+}
+
+.detail-info__description {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  margin-bottom: var(--sp-lg);
+}
+
+.detail-info__description h2 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--sp-md);
+}
+
+.detail-info__description p {
+  font-size: var(--fs-base);
+  line-height: 1.8;
+}
+
+.detail-info__posted {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+}
+
+/* ── Right: Price Card ─────────────────────────────────────────────── */
+.detail-price-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-xl);
+  position: sticky;
+  top: 90px;
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.detail-price-card__label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--sp-xs);
+}
+
+.detail-price-card__value {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--clr-primary-light), var(--clr-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--sp-xs);
+}
+
+.detail-price-card__hint {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+  margin-bottom: var(--sp-xl);
+}
+
+.detail-price-card__meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-md);
+  margin-bottom: var(--sp-xl);
+  padding-top: var(--sp-md);
+  border-top: 1px solid var(--clr-border);
+}
+
+.detail-price-card__meta dt {
+  font-size: var(--fs-xs);
+  color: var(--clr-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.detail-price-card__meta dd {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--clr-text-light);
+}
+
+/* ── Empty State ───────────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: var(--sp-3xl);
+  color: var(--clr-text-muted);
+}
+
+.empty-state__icon {
+  font-size: 4rem;
+  margin-bottom: var(--sp-md);
+}
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .detail-page {
+    padding: var(--sp-lg) var(--sp-md);
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-price-card {
+    position: static;
+  }
+}

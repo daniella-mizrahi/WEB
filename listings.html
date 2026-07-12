@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="אודות Roomies — הפלטפורמה למציאת שותפים לדירה. שאלות נפוצות וטיפים.">
+  <title>Roomies | אודות</title>
+
+  <link rel="stylesheet" href="CSS/global.css">
+  <link rel="stylesheet" href="CSS/about.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="site-header__brand">
+      <img src="Images/logo.png" alt="Roomies Logo" class="site-header__logo-img">
+      <span class="site-header__logo-text">Roomies</span>
+    </div>
+    <nav aria-label="ניווט ראשי">
+      <ul class="site-nav__list">
+        <li><a href="index.html"       class="site-nav__link">דף הבית</a></li>
+        <li><a href="listings.html"    class="site-nav__link">לוח דירות</a></li>
+        <li><a href="new-listing.html" class="site-nav__link site-nav__link--cta">+ פרסם דירה</a></li>
+        <li><a href="expenses.html"    class="site-nav__link">לוח מטלות</a></li>
+        <li><a href="about.html"       class="site-nav__link active" aria-current="page">אודות</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main>
+
+    <!-- ── About Hero ───────────────────────────────────────────── -->
+    <section class="about-hero" aria-labelledby="about-heading">
+      <div class="container">
+        <h1 id="about-heading">אודות <span class="gradient-text">Roomies</span></h1>
+        <p class="about-hero__desc">
+          Roomies נוסדה כדי לפתור בעיה שכולנו מכירות — למצוא שותפה לדירה שמתאימה
+          לאורח החיים שלך, לא רק לכיס. הפלטפורמה שלנו מתמקדת בהתאמה אישית,
+          שקיפות ופשטות.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Team Section ─────────────────────────────────────────── -->
+    <section class="team-section" aria-labelledby="team-heading">
+      <div class="container">
+        <h2 id="team-heading" class="section-title">הצוות שלנו</h2>
+        <p class="section-subtitle">הסטודנטיות שפיתחו את הפרויקט</p>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-card__avatar" aria-hidden="true">👩‍💻</div>
+            <h3>דקלה שטרן</h3>
+          </article>
+          <article class="team-card">
+            <div class="team-card__avatar" aria-hidden="true">👩‍💻</div>
+            <h3>סתיו קלרר</h3>
+          </article>
+          <article class="team-card">
+            <div class="team-card__avatar" aria-hidden="true">👩‍💻</div>
+            <h3>דניאלה מזרחי</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ Accordion ────────────────────────────────────────── -->
+    <!--
+      JS REQUIREMENT #1: Event response — click to toggle accordion
+      JS REQUIREMENT #3: Dynamic CSS class — .faq-item--open toggled
+    -->
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-title">שאלות נפוצות</h2>
+        <p class="section-subtitle">תשובות לשאלות שנשאלות הכי הרבה</p>
+
+        <div class="faq-list" id="faq-list">
+
+          <article class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>איך מפרסמים דירה באתר?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>לחצי על "פרסם דירה" בתפריט הראשי. מלאי את טופס הפרטים — עיר, כתובת, מחיר, מספר חדרים, תאריך כניסה ותיאור — ולחצי על "פרסמי". הדירה תופיע בלוח הדירות.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>האם השירות עולה כסף?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>לא! Roomies הוא פרויקט אקדמי ולכן השירות ניתן בחינם לחלוטין. אין עמלות פרסום, אין תשלום על צפייה במודעות.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>איך מוצאים דירה לפי עיר?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>בדף הבית יש שדה חיפוש לפי עיר. הקלידי את שם העיר, בחרי מההצעות שמופיעות, ותועברי ללוח הדירות המסונן לעיר שבחרת.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>מה ההבדל בין "מחיר כולל" ל"מחיר לאדם"?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>המחיר הכולל הוא שכר הדירה המלא. המחיר לאדם מחושב אוטומטית: שכ"ד כולל חלקי מספר חדרים. כך תוכלי לדעת כמה תשלמי בפועל.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>האם ניתן לפרסם דירה שמתאימה לחיות מחמד?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>בהחלט! בטופס הפרסום יש אפשרות לסמן שהדירה ידידותית לחיות מחמד. מידע זה מוצג בכרטיס הדירה כדי שמחפשות שותפה ידעו מראש.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact Banner ───────────────────────────────────────── -->
+    <section class="contact-banner" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading">רוצה לדעת עוד?</h2>
+        <p>מוזמנת לגלוש בלוח הדירות או לפרסם דירה משלך</p>
+        <div class="contact-banner__cta">
+          <a href="listings.html" class="btn btn--primary">לוח הדירות</a>
+          <a href="new-listing.html" class="btn btn--accent">פרסום דירה</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2026 Roomies — כל הזכויות שמורות | פרויקט גמר, קורס תכנות ווב</p>
+  </footer>
+
+  <script src="JS/about.js"></script>
+</body>
+</html>
